@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="end" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Grid Row & Grid Column</title>
+		<style type="text/css">
+
+			.container {
+				width: 600px;
+				margin: 0 auto;
+				border: 5px solid black;
+
+				display: grid;
+				grid-template-columns: 100px 80px 230px;
+				grid-template-rows: 100px 100px;
+
+				/* 
+					Untuk membuat grid item nya 
+					akan selalu berada di sisi samping.
+
+					Values :
+					row => untuk membuat agar grid item 
+					      selalu berada dibawah item sebelumnya, 
+								jika jumlah item nya sudah melebihi 
+								jumlah kolom yg di definisikan 
+								di grid-template-columns. (Nilai default)
+					column => untuk membuat agar grid item 
+					      selalu berada disamping item sebelumnya.
+								jadi perhitungannya itu dri atas kebawah baru ke kanan dan ke bawah lgi
+								contoh : (klo value nya column dan kita tambahin grid-template-rows) 
+								1 3 5
+								2 4 6
+				*/
+				/* grid-auto-flow: column; */
+
+				/* 
+					untuk memberika ukuran column 
+					kepada grid item nya ukurannya bersifat i
+					mplisit 
+				*/
+				/* grid-auto-columns: 100px; */
+				/*
+					untuk memberika ukuran row 
+					kepada grid item nya ukurannya bersifat i
+					mplisit 
+				*/
+				/* grid-auto-rows: 100px; */
+			}
+
+			.items:nth-child(odd) {
+				background-color: red;
+				text-align: center;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.items:nth-child(even) {
+				background-color: blue;
+				text-align: center;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Grid Row & Grid Column</h1>
+
+		<div class="container">
+			<div class="items">1</div>
+			<div class="items">2</div>
+			<div class="items">3</div>
+			<div class="items">4</div>
+			<div class="items">5</div>
+			<div class="items">6</div>
+			<div class="items">7</div>
+			<div class="items">8</div>
+			<div class="items">9</div>
+			<div class="items">10</div>
+		</div>
+	</body>
+</html>

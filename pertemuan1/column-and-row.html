@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="end" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Grid Row & Grid Column</title>
+		<style type="text/css">
+
+			.container {
+				width: 600px;
+				margin: 0 auto;
+				border: 5px solid black;
+
+				display: grid;
+
+				/* 
+					Untuk menetukan grid column. 
+					disini kita membuat 3 kolom. 
+					Untuk satuan yg bisa di pake 
+					bisa berupa px, persen & juga fr 
+				*/
+				/* tanpa nama */
+				/* grid-template-columns: 100px 80px 230px; */
+				/* dengan nama */
+				grid-template-columns: [satu] 100px [dua] 80px [tiga] 230px;
+
+				/* 
+					Untuk menetukan grid row. 
+					disini kita membuat 4 row.
+					Untuk satuan yg bisa di pake 
+					bisa berupa px, persen & juga fr 
+				*/
+				grid-template-rows: 100px 50px 80px 100px;
+			}
+
+			.items:nth-child(odd) {
+				background-color: red;
+				text-align: center;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.items:nth-child(even) {
+				background-color: blue;
+				text-align: center;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Grid Row & Grid Column</h1>
+
+		<div class="container">
+			<div class="items">1</div>
+			<div class="items">2</div>
+			<div class="items">3</div>
+			<div class="items">4</div>
+			<div class="items">5</div>
+			<div class="items">6</div>
+			<div class="items">7</div>
+			<div class="items">8</div>
+			<div class="items">9</div>
+			<div class="items">10</div>
+		</div>
+	</body>
+</html>

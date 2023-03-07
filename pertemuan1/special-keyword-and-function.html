@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="end" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Special Keyword & Function</title>
+		<style type="text/css">
+
+			.container {
+				width: 60%;
+				margin: 0 auto;
+				border: 5px solid black;
+
+				display: grid;
+				/* 
+					1. repeat 
+					Untuk megulang memberi value 
+					kepada suatu property. Biasanya
+					kita gunakan untuk property
+					grid-template-rows atau
+					grid-template-columns
+
+					rumus :
+					repeat(mau di ulang berapa kali, value nya);
+				*/
+				/* grid-template-columns: repeat(4, 1fr); */
+
+				/*
+				2. min-content
+				min-content akan membuat ukurab track
+				sesuami dengan konten nya. Dan jika kontennya
+				berupa teks yg terdiri lebih dari setu kata
+				maka setiap kata akan di taruh kebawah.
+				Contoh misal kata sekolah koding, 
+				maka akan jadi seperti ini
+				sekolah
+				koding
+				*/
+				/* grid-template-columns: min-content 100px; */
+
+				/*
+					3. max-content
+					max-content akan membuat ukuran track
+					sesuai dengna kontennya. Dan jika kontennya berupa teks
+					yag terdiri dari lebih dari satu kata, maka setiap
+					kata2nya akan selalu di taru di samping.
+					MIsal sekolah koding akan menjadi tetap sekolah koding
+				*/
+				/* grid-template-columns: max-content 100px; */
+
+				/*
+					4. minmax
+					Untuk membarika ukuran track minimal dan
+					maksimal nya berapa.
+				*/
+				/* grid-template-columns: 100px minmax(400px, 700px) 100px; */
+
+				/*
+					4. auto-fill
+					Untuk membuat agar jika container masih mencukupi
+					untuk menamping grid item maka dia akan di taruh di samping
+					item sebelumnya dan jika sudah tidak mencukupi maka akan
+					di taruh di bawahnya. Namun auto-fill akan memberikan jarak
+					setelah element terakhir. 
+				*/
+				/* grid-template-columns: repeat(auto-fill, 100px); */
+
+				/*
+					5. auto-fit
+					Untuk membuat agar jika container masih mencukupi
+					untuk menamping grid item maka dia akan di taruh di samping
+					item sebelumnya dan jika sudah tidak mencukupi maka akan
+					di taruh di bawahnya. Namun auto-fit tidak akan memberikan jarak
+					setelah element terakhir. 
+				*/
+				grid-template-columns: repeat(auto-fit, 100px);
+			}
+
+			.items:nth-child(odd) {
+				background-color: red;
+				text-align: center;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.items:nth-child(even) {
+				background-color: blue;
+				text-align: center;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Special Keyword & Function</h1>
+
+		<div class="container">
+			<div class="items">Sekolah Koding</div>
+			<div class="items">2</div>
+			<div class="items">3</div>
+			<!-- <div class="items">4</div>
+			<div class="items">5</div>
+			<div class="items">6</div>
+			<div class="items">7</div>
+			<div class="items">8</div>
+			<div class="items">9</div>
+			<div class="items">10</div> -->
+		</div>
+	</body>
+</html>
