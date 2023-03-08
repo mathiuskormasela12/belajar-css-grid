@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Grid | Grid Item Properties</title>
+	<style type="text/css">
+
+		.container {
+			border: 5px solid black;
+			width: 80%;
+			margin: auto;
+
+			display: grid;
+			grid-template-columns: [ichi] 1fr [ni] 1fr [san] 1fr [shi];
+			grid-template-rows: [go] 100px [roku] 100px [nana] 100px [hachi];
+		}
+
+		.items {
+			color: white;
+			height: 50px;
+			width: 50px;
+		}
+
+		.header {
+			background-color: red;
+
+			/* grid-column-start: 2;
+			grid-column-end: 4;
+			grid-row-start: 2;
+			grid-row-end: 4; */
+
+			/* grid-column-start: -2;
+			grid-column-end: -3;
+			grid-row-start: -1;
+			grid-row-end: -3; */
+
+			/* grid-column-start: ichi;
+			grid-column-end: ni;
+			grid-row-start: roku;
+			grid-row-end: hachi; */
+
+			/* grid-column-start: 2;
+			grid-column-end: span 2;
+			grid-row-start: 2;
+			grid-row-end: span 2; */
+		}
+
+		.sidebar {
+			background-color: aquamarine;
+
+			/* Untuk mengatur item secara horizontal. mirip dengan align-self flexbox, tpi ini buat sumbi horizontal */
+			/* justify-self: center; */
+			/* justify-self: start; */
+			/* justify-self: end; */
+			/* justify-self: stretch; */
+
+			/* Untuk mengatur item secara vertial. mirip dengan align-self flexbox */
+			/* align-self: start; */
+			/* align-self: end; */
+			/* align-self: center; */
+			/* align-self: stretch; */
+
+			/* align-self: center;
+			justify-self: center; */
+
+			/* Short-hand justify-self & align-self */
+			/* rumus : place-self: align-self justify-self; */
+			place-self: center end;
+		}
+
+		.content {
+			background-color: brown;
+		}
+
+		.footer {
+			background-color: yellowgreen;
+
+			/* grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: -2;
+			grid-row-end: -1; */
+
+			/* Short-hand grid-column-start & grid-column-end */
+			/* Rumus  grid-column: start / end; */
+			/* grid-column: 3 / 4; */
+			/* Short-hand grid-row-start & grid-row-end */
+			/* Rumus  grid-row: start / end; */
+			/* grid-row: -2 / -1; */
+
+			/* Short-hand grid-column-start, grid-column-end, grid-row-start & grid-row-end */
+			/* Rumus grid-area: grid-row-start / grid-column-start / grid-row-end / grid-col-end */
+			grid-area: -2 / 3 / -1 / 4;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Grid Item Properties</h1>
+
+	<div class="container">
+		<div class="items header">Header</div>
+		<div class="items sidebar">Sidebar</div>
+		<div class="items content">Content</div>
+		<div class="items footer">Footer</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Grid | Grid Template Areas</title>
+		<style type="text/css">
+
+			.container {
+				width: 60%;
+				margin: 0 auto;
+				border: 5px solid  black;
+
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+
+				/* Untuk mendefinisikan Grid Template Area */
+				grid-template-areas: 
+					/* Ini 1 Row */
+					'header header header'
+					/* Ini 1 Row */
+					'sidebar sidebar sidebar'
+					/* Ini 1 Row */
+					'content content content'
+					/* Ini 1 Row */
+					'footer footer footer'
+				;
+			}
+
+			.items {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				padding: 100px;
+				box-sizing: border-box;
+			}
+
+			.header {
+				background-color: blueviolet;
+				/* Untuk menggunakan grid template yg sudah di definisikan */
+				grid-area: header;
+			}
+
+			.sidebar {
+				background-color: yellowgreen;
+				grid-area: sidebar;
+			}
+
+			.content {
+				background-color: red;
+					/* Untuk menggunakan grid template yg sudah di definisikan */
+				grid-area: content;
+			}
+
+			.footer {
+				background-color: tomato;
+					/* Untuk menggunakan grid template yg sudah di definisikan */
+				grid-area: footer;
+			}
+
+			@media screen and (min-width: 576px) {
+				.container {
+					grid-template-areas: 
+					/* Ini 1 Row */
+					'header header header'
+					/* Ini 1 Row */
+					'sidebar content content'
+					/* Ini 1 Row */
+					'sidebar content content'
+					/* Ini 1 Row */
+					'footer footer footer'
+				;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Grid Template Areas</h1>
+
+		<div class="container">
+			<div class="items header">Header</div>
+			<div class="items sidebar">Sidebar</div>
+			<div class="items content">Content</div>
+			<div class="items footer">Footer</div>
+		</div>
+	</body>
+</html>
